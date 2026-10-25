@@ -1,0 +1,34 @@
+[
+ {
+  "id": "trade",
+  "label": "Bilateral trade flows",
+  "status": "SEED",
+  "source": "Gravity-model estimate from approximate 2023 national totals (data-prep/seed_economies.py)",
+  "vintage": "2023 (approx.)",
+  "note": "Replace with CEPII BACI via data-prep/build_trade_baci.py"
+ },
+ {
+  "id": "portwatch",
+  "label": "Chokepoint transits",
+  "status": "OBSERVED",
+  "source": "IMF PortWatch",
+  "vintage": "daily",
+  "note": ""
+ },
+ {
+  "id": "gdp",
+  "label": "GDP (current USD)",
+  "status": "OBSERVED",
+  "source": "World Bank via datasets/gdp (GitHub mirror)",
+  "vintage": "2022\u20132023",
+  "note": "Taiwan from IMF WEO (not in World Bank data)"
+ },
+ {
+  "id": "network",
+  "label": "Sea-lane network",
+  "status": "MODELLED",
+  "source": "230 nodes / 294 lanes, great-circle legs between hand-placed waypoints; land-checked against Natural Earth 1:50m; port-to-port totals within ~2\u20135% of searoute",
+  "vintage": "built offline",
+  "note": ""
+ }
+]

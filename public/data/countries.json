@@ -1,0 +1,816 @@
+[
+ {
+  "iso3": "CHN",
+  "name": "China",
+  "gdpUsd": 17794781986104,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 3380,
+  "importsBn": 2560,
+  "ports": {
+   "P_SHANGHAI": 0.55,
+   "P_SHENZHEN": 0.45
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "USA",
+  "name": "United States",
+  "gdpUsd": 27360935000000,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 2020,
+  "importsBn": 3170,
+  "ports": {
+   "P_NEWYORK": 0.42,
+   "P_HOUSTON": 0.23,
+   "P_LOSANGELES": 0.35
+  },
+  "eports": {
+   "P_HOUSTON": 0.85,
+   "P_NEWYORK": 0.1,
+   "P_LOSANGELES": 0.05
+  },
+  "bports": {
+   "P_HOUSTON": 0.55,
+   "P_LOSANGELES": 0.3,
+   "P_NEWYORK": 0.15
+  },
+  "bypass": []
+ },
+ {
+  "iso3": "DEU",
+  "name": "Germany",
+  "gdpUsd": 4456081016706,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 1690,
+  "importsBn": 1460,
+  "ports": {
+   "P_HAMBURG": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "JPN",
+  "name": "Japan",
+  "gdpUsd": 4212945159781,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 717,
+  "importsBn": 786,
+  "ports": {
+   "P_YOKOHAMA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "KOR",
+  "name": "South Korea",
+  "gdpUsd": 1712792854202,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 632,
+  "importsBn": 642,
+  "ports": {
+   "P_BUSAN": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "NLD",
+  "name": "Netherlands",
+  "gdpUsd": 1118124749886,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 935,
+  "importsBn": 840,
+  "ports": {
+   "P_ROTTERDAM": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "FRA",
+  "name": "France",
+  "gdpUsd": 3030904089608,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 648,
+  "importsBn": 787,
+  "ports": {
+   "P_LEHAVRE": 0.55,
+   "P_MARSEILLE": 0.45
+  },
+  "eports": {
+   "P_MARSEILLE": 0.55,
+   "P_LEHAVRE": 0.45
+  },
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "ITA",
+  "name": "Italy",
+  "gdpUsd": 2254851212732,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 677,
+  "importsBn": 639,
+  "ports": {
+   "P_GENOA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "GBR",
+  "name": "United Kingdom",
+  "gdpUsd": 3340032380668,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 521,
+  "importsBn": 791,
+  "ports": {
+   "P_FELIXSTOWE": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "BEL",
+  "name": "Belgium",
+  "gdpUsd": 632216577075,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 560,
+  "importsBn": 530,
+  "ports": {
+   "P_ANTWERP": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "IND",
+  "name": "India",
+  "gdpUsd": 3549918918778,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 432,
+  "importsBn": 672,
+  "ports": {
+   "P_MUMBAI": 0.6,
+   "P_CHENNAI": 0.4
+  },
+  "eports": {
+   "P_MUMBAI": 0.7,
+   "P_CHENNAI": 0.3
+  },
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "CAN",
+  "name": "Canada",
+  "gdpUsd": 2140085567791,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 569,
+  "importsBn": 570,
+  "ports": {
+   "P_VANCOUVER": 0.5,
+   "P_HALIFAX": 0.5
+  },
+  "eports": {
+   "P_VANCOUVER": 0.6,
+   "P_HALIFAX": 0.4
+  },
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "MEX",
+  "name": "Mexico",
+  "gdpUsd": 1788886821047,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 593,
+  "importsBn": 599,
+  "ports": {
+   "P_VERACRUZ": 0.5,
+   "P_MANZANILLO": 0.5
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "SGP",
+  "name": "Singapore",
+  "gdpUsd": 501427500080,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 476,
+  "importsBn": 423,
+  "ports": {
+   "P_SINGAPORE": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "TWN",
+  "name": "Taiwan",
+  "gdpUsd": 756600000000,
+  "gdpYear": 2023,
+  "gdpSource": "IMF WEO (seed)",
+  "exportsBn": 432,
+  "importsBn": 352,
+  "ports": {
+   "P_KAOHSIUNG": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "ESP",
+  "name": "Spain",
+  "gdpUsd": 1580694712516,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 423,
+  "importsBn": 474,
+  "ports": {
+   "P_ALGECIRAS": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "RUS",
+  "name": "Russia",
+  "gdpUsd": 2021421476035,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 425,
+  "importsBn": 290,
+  "ports": {
+   "P_USTLUGA": 0.35,
+   "P_NOVOROSSIYSK": 0.35,
+   "P_VLADIVOSTOK": 0.3
+  },
+  "eports": {
+   "P_USTLUGA": 0.38,
+   "P_NOVOROSSIYSK": 0.37,
+   "P_VLADIVOSTOK": 0.25
+  },
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "SAU",
+  "name": "Saudi Arabia",
+  "gdpUsd": 1067582933333,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 322,
+  "importsBn": 215,
+  "ports": {
+   "P_RASTANURA": 0.4,
+   "P_REDSEA_SA": 0.6
+  },
+  "eports": {
+   "P_RASTANURA": 0.88,
+   "P_REDSEA_SA": 0.12
+  },
+  "bports": null,
+  "bypass": [
+   {
+    "frm": "P_RASTANURA",
+    "to": "P_REDSEA_SA",
+    "cap": {
+     "crude": 0.45,
+     "refined": 0.3,
+     "*": 0.2
+    },
+    "note": "East-West pipeline to Yanbu + overland to Jeddah"
+   }
+  ]
+ },
+ {
+  "iso3": "ARE",
+  "name": "United Arab Emirates",
+  "gdpUsd": 504173451327,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 488,
+  "importsBn": 400,
+  "ports": {
+   "P_JEBELALI": 0.75,
+   "P_FUJAIRAH": 0.25
+  },
+  "eports": {
+   "P_JEBELALI": 0.55,
+   "P_FUJAIRAH": 0.45
+  },
+  "bports": null,
+  "bypass": [
+   {
+    "frm": "P_JEBELALI",
+    "to": "P_FUJAIRAH",
+    "cap": {
+     "crude": 0.45,
+     "refined": 0.4,
+     "*": 0.35
+    },
+    "note": "Habshan-Fujairah pipeline + Khor Fakkan transshipment"
+   }
+  ]
+ },
+ {
+  "iso3": "IRQ",
+  "name": "Iraq",
+  "gdpUsd": 250842782139,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 100,
+  "importsBn": 70,
+  "ports": {
+   "P_BASRA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "KWT",
+  "name": "Kuwait",
+  "gdpUsd": 161772221951,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 85,
+  "importsBn": 35,
+  "ports": {
+   "P_KUWAIT": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "QAT",
+  "name": "Qatar",
+  "gdpUsd": 235770403735,
+  "gdpYear": 2022,
+  "gdpSource": "World Bank",
+  "exportsBn": 98,
+  "importsBn": 32,
+  "ports": {
+   "P_RASLAFFAN": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "IRN",
+  "name": "Iran",
+  "gdpUsd": 401504514719,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 90,
+  "importsBn": 70,
+  "ports": {
+   "P_KHARG": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": [
+   {
+    "frm": "P_KHARG",
+    "to": "P_JASK",
+    "cap": {
+     "crude": 0.05,
+     "*": 0.1
+    },
+    "note": "Goreh-Jask pipeline (limited)"
+   }
+  ]
+ },
+ {
+  "iso3": "OMN",
+  "name": "Oman",
+  "gdpUsd": 108192457737,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 55,
+  "importsBn": 32,
+  "ports": {
+   "P_SOHAR": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "ISR",
+  "name": "Israel",
+  "gdpUsd": 509901495702,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 70,
+  "importsBn": 92,
+  "ports": {
+   "P_HAIFA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "EGY",
+  "name": "Egypt",
+  "gdpUsd": 395926075163,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 40,
+  "importsBn": 80,
+  "ports": {
+   "P_PORTSAID": 0.65,
+   "P_SOKHNA": 0.35
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "TUR",
+  "name": "T\u00fcrkiye",
+  "gdpUsd": 1108022373260,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 256,
+  "importsBn": 362,
+  "ports": {
+   "P_AMBARLI": 0.6,
+   "P_MERSIN": 0.4
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "POL",
+  "name": "Poland",
+  "gdpUsd": 811229100688,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 380,
+  "importsBn": 362,
+  "ports": {
+   "P_GDANSK": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "NOR",
+  "name": "Norway",
+  "gdpUsd": 485513316504,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 175,
+  "importsBn": 95,
+  "ports": {
+   "P_MONGSTAD": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "GRC",
+  "name": "Greece",
+  "gdpUsd": 238206312633,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 55,
+  "importsBn": 88,
+  "ports": {
+   "P_PIRAEUS": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "VNM",
+  "name": "Vietnam",
+  "gdpUsd": 429716969050,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 355,
+  "importsBn": 327,
+  "ports": {
+   "P_CAIMEP": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "MYS",
+  "name": "Malaysia",
+  "gdpUsd": 399648828547,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 312,
+  "importsBn": 266,
+  "ports": {
+   "P_KLANG": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "THA",
+  "name": "Thailand",
+  "gdpUsd": 514944993834,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 285,
+  "importsBn": 290,
+  "ports": {
+   "P_LAEMCHABANG": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "IDN",
+  "name": "Indonesia",
+  "gdpUsd": 1371171152331,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 259,
+  "importsBn": 222,
+  "ports": {
+   "P_JAKARTA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "PHL",
+  "name": "Philippines",
+  "gdpUsd": 437146372730,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 74,
+  "importsBn": 126,
+  "ports": {
+   "P_MANILA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "AUS",
+  "name": "Australia",
+  "gdpUsd": 1723827215335,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 371,
+  "importsBn": 288,
+  "ports": {
+   "P_NEWCASTLE": 0.65,
+   "P_HEDLAND": 0.35
+  },
+  "eports": {
+   "P_HEDLAND": 0.6,
+   "P_NEWCASTLE": 0.4
+  },
+  "bports": {
+   "P_HEDLAND": 0.6,
+   "P_NEWCASTLE": 0.4
+  },
+  "bypass": []
+ },
+ {
+  "iso3": "NZL",
+  "name": "New Zealand",
+  "gdpUsd": 253465703232,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 40,
+  "importsBn": 48,
+  "ports": {
+   "P_AUCKLAND": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "BRA",
+  "name": "Brazil",
+  "gdpUsd": 2173665655937,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 340,
+  "importsBn": 253,
+  "ports": {
+   "P_SANTOS": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "ARG",
+  "name": "Argentina",
+  "gdpUsd": 640591410664,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 67,
+  "importsBn": 74,
+  "ports": {
+   "P_RIOPLATA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "CHL",
+  "name": "Chile",
+  "gdpUsd": 335533331669,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 95,
+  "importsBn": 80,
+  "ports": {
+   "P_SANANTONIO": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "PER",
+  "name": "Peru",
+  "gdpUsd": 267603248655,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 67,
+  "importsBn": 50,
+  "ports": {
+   "P_CALLAO": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "COL",
+  "name": "Colombia",
+  "gdpUsd": 363540156235,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 50,
+  "importsBn": 62,
+  "ports": {
+   "P_CARTAGENA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "NGA",
+  "name": "Nigeria",
+  "gdpUsd": 362814951696,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 60,
+  "importsBn": 52,
+  "ports": {
+   "P_LAGOS": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "AGO",
+  "name": "Angola",
+  "gdpUsd": 84722957642,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 37,
+  "importsBn": 17,
+  "ports": {
+   "P_LUANDA": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "ZAF",
+  "name": "South Africa",
+  "gdpUsd": 377781600986,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 110,
+  "importsBn": 108,
+  "ports": {
+   "P_DURBAN": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "MAR",
+  "name": "Morocco",
+  "gdpUsd": 141109373209,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 43,
+  "importsBn": 58,
+  "ports": {
+   "P_TANGERMED": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "DZA",
+  "name": "Algeria",
+  "gdpUsd": 239899491128,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 55,
+  "importsBn": 40,
+  "ports": {
+   "P_ARZEW": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "PAK",
+  "name": "Pakistan",
+  "gdpUsd": 338368455318,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 28,
+  "importsBn": 55,
+  "ports": {
+   "P_KARACHI": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ },
+ {
+  "iso3": "BGD",
+  "name": "Bangladesh",
+  "gdpUsd": 437415331041,
+  "gdpYear": 2023,
+  "gdpSource": "World Bank",
+  "exportsBn": 55,
+  "importsBn": 70,
+  "ports": {
+   "P_CHITTAGONG": 1
+  },
+  "eports": null,
+  "bports": null,
+  "bypass": []
+ }
+]

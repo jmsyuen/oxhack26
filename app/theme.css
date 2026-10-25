@@ -1,0 +1,153 @@
+/* Shared design tokens and component classes (Next.js app and the single-file artifact). */
+@theme {
+  --color-bg: #070b12;
+  --color-panel: #0d1420;
+  --color-raised: #131c2b;
+  --color-line: #1e2a3c;
+  --color-line-2: #2a3850;
+  --color-ink: #e6edf5;
+  --color-mute: #7d8ba0;
+  --color-faint: #4e5b70;
+  --color-cyan: #2ec4e6;
+  --color-red: #ef5a5f;
+  --color-amber: #f2a93b;
+  --color-green: #34c38f;
+  --color-strand: #8c96a8;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+}
+
+@layer base {
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+}
+
+/* Component classes live in a layer so Tailwind utilities can override them. */
+@layer components {
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 0;
+}
+
+.lbl {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-mute);
+  font-weight: 500;
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-cyan);
+  outline-offset: 1px;
+}
+
+/* thin scrollbars for the panel */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-2) transparent;
+}
+
+/* range input */
+input[type="range"].rng {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 18px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"].rng::-webkit-slider-runnable-track {
+  height: 2px;
+  background: linear-gradient(to right, var(--fill, var(--color-cyan)) 0 var(--p, 0%), var(--color-line-2) var(--p, 0%) 100%);
+}
+input[type="range"].rng::-moz-range-track {
+  height: 2px;
+  background: var(--color-line-2);
+}
+input[type="range"].rng::-moz-range-progress {
+  height: 2px;
+  background: var(--fill, var(--color-cyan));
+}
+input[type="range"].rng::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 14px;
+  margin-top: -6px;
+  border-radius: 2px;
+  background: var(--color-ink);
+  border: 1px solid var(--color-bg);
+}
+input[type="range"].rng::-moz-range-thumb {
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--color-ink);
+  border: 1px solid var(--color-bg);
+}
+
+/* value flash after change */
+@keyframes flash-red {
+  0% { color: var(--color-red); }
+  100% { color: var(--color-ink); }
+}
+@keyframes flash-green {
+  0% { color: var(--color-green); }
+  100% { color: var(--color-ink); }
+}
+.flash-bad { animation: flash-red 900ms ease-out; }
+.flash-good { animation: flash-green 900ms ease-out; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.25); }
+  50% { transform: scaleY(1); }
+}
+
+}
+
+/* MapLibre chrome */
+.maplibregl-ctrl-attrib {
+  background: rgba(7, 11, 18, 0.7) !important;
+  color: var(--color-faint) !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a { color: var(--color-mute) !important; }
+.maplibregl-ctrl-group {
+  background: var(--color-panel) !important;
+  border: 1px solid var(--color-line) !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+}
+.maplibregl-ctrl-group button { width: 26px !important; height: 26px !important; }
+.maplibregl-ctrl-group button + button { border-top: 1px solid var(--color-line) !important; }
+.maplibregl-ctrl-icon { filter: invert(0.75); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
+}
+
+/* map animation (artifact D3 map) */
+.lane-flow { stroke-dasharray: 1 7; animation: lanefw 1.6s linear infinite; }
+.lane-flow.rev { animation-direction: reverse; }
+@keyframes lanefw { to { stroke-dashoffset: -8; } }
+.blk-pulse { animation: blkpulse 2.6s ease-out infinite; transform-box: fill-box; }
+@keyframes blkpulse { 0% { opacity: 0.65; } 100% { opacity: 0; } }
+.trace-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: tracedraw 0.9s ease-out forwards; }
+@keyframes tracedraw { to { stroke-dashoffset: 0; } }

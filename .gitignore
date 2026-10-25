@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.env.local
+.env*.local
+data-prep/raw/
+__pycache__/
+*.pyc
+.DS_Store
+npm-debug.log*
+artifact/dist/
+data-prep/out/xgb_model.json
