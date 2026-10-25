@@ -12,3 +12,7 @@ __pycache__/
 npm-debug.log*
 artifact/dist/
 data-prep/out/xgb_model.json
+# never commit a filled-in copy of the Vultr script (deploy/vultr-cloud-init.sh stays blank)
+/vultr-cloud-init*.sh
+*-WITH-KEYS*
+

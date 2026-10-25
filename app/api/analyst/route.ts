@@ -3,6 +3,8 @@ import { ANALYST_SYSTEM, TOOL_DEFS } from "@/lib/analyst/tools";
 import { getConfig } from "@/lib/server/config";
 
 export const dynamic = "force-dynamic";
+// Vercel: allow slow model responses (within every plan's limit)
+export const maxDuration = 30;
 
 /**
  * Analyst Mode proxy for Google Gemini with function calling. The key stays here; the browser runs the tools

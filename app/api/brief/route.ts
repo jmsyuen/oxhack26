@@ -4,6 +4,8 @@ import { templateBrief } from "@/lib/server/briefTemplate";
 import { getConfig } from "@/lib/server/config";
 
 export const dynamic = "force-dynamic";
+// Vercel: allow slow model responses (within every plan's limit)
+export const maxDuration = 30;
 
 const SYSTEM = `You are a calm, precise radio news anchor. Write a spoken briefing of 55 to 80 words (about 25 seconds) on a SIMULATED shipping-disruption scenario.
 Rules:

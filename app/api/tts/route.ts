@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getConfig } from "@/lib/server/config";
 
 export const dynamic = "force-dynamic";
+// Vercel: allow slow model responses (within every plan's limit)
+export const maxDuration = 30;
 
 interface Alignment {
   characters: string[];

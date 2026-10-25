@@ -35,6 +35,7 @@ Built in 25 hours at OxHack 26, Mathematical Institute, Oxford, 24 to 25 October
 - [Performance](#performance)
 - [Data sources and provenance](#data-sources-and-provenance)
 - [Running it locally](#running-it-locally)
+- [Deploying](#deploying)
 - [Project structure](#project-structure)
 - [Assumptions and limitations](#assumptions-and-limitations)
 - [Tech stack](#tech-stack)
@@ -416,6 +417,16 @@ cd .. && npm run sanity
 
 ---
 
+## Deploying
+
+Both options give a public HTTPS link and redeploy automatically when you push to GitHub. API keys are entered on the host, never committed.
+
+**Vultr (one paste).** In the Vultr dashboard choose Deploy, Cloud Compute, Ubuntu 24.04 (2 GB RAM recommended). Under Additional features, tick Cloud-Init User-Data and paste [`deploy/vultr-cloud-init.sh`](deploy/vultr-cloud-init.sh) with your keys filled in at the top. About eight minutes later the app is live at `https://<server-ip-with-dashes>.sslip.io` with a Let's Encrypt certificate from Caddy, so no domain is needed. A systemd timer checks GitHub every two minutes and rebuilds on new commits ([`deploy/update.sh`](deploy/update.sh)). Logs: `/var/log/chokepoint-setup.log` and `journalctl -u chokepoint`.
+
+**Vercel.** Import the GitHub repository at vercel.com/new (the framework is detected as Next.js), add `GEMINI_API_KEY`, `ELEVENLABS_API_KEY` and `FRED_API_KEY` under Environment Variables, and deploy. The model-backed API routes declare `maxDuration = 30` so slower Gemini responses are not cut off.
+
+---
+
 ## Project structure
 
 ```
@@ -449,6 +460,7 @@ data-prep/
   calibrate_queue.py         Ever Given fit
   build_network.py, build_trade_seed.py, build_trade_baci.py, ...
 artifact/                    single-file build: d3 map, Claude analyst backend, build script
+deploy/                      one-paste Vultr cloud-init setup and auto-redeploy script
 public/data/                 network, flows, countries, traffic, forecast model and evaluation, queue calibration
 scripts/                     sanity checks, decision demo, pitch table
 docs/                        pitch script, screenshots, offline demo
