@@ -10,9 +10,9 @@ CHOKEPOINT answers that question ship by ship. Drop a blockage anywhere on the w
 4. shows the trade, country, commodity and oil-price impact of the same blockage, and
 5. lets an analyst (Gemini, read aloud by ElevenLabs) explain the recommendation using only the model's own numbers.
 
-Built in 25 hours at OxHack 26, Mathematical Institute, Oxford, 24 to 25 October 2026. Entered for the Hudson River Trading track (Best Use of Data for Predictions and Decision Making), MLH Best Use of Gemini API and MLH Best Use of ElevenLabs.
+Built in 25 hours at OxHack 26, Mathematical Institute, Oxford, 24 to 25 October 2026. Entered for the Hudson River Trading track (Best Use of Data for Predictions and Decision Making), MLH Best Use of Gemini API and MLH Best Use of ElevenLabs, Hackiest Hack
 
-- **Live demo:** [claude.ai/artifact/CSJN2vZy5gBgd4rgnWhqDv](https://claude.ai/artifact/CSJN2vZy5gBgd4rgnWhqDv) (single HTML file, nothing to install)
+- **Live demo:** https://45-76-137-165.sslip.io/  (Hosted on Vultr)
 - **Offline copy of the demo:** [`docs/chokepoint-offline.html`](docs/chokepoint-offline.html)
 - **Demo script and judge Q&A:** [`docs/PITCH.md`](docs/PITCH.md)
 
