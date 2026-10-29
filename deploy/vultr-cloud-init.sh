@@ -50,7 +50,7 @@ if [ -n "$GITHUB_TOKEN" ]; then URL="${REPO/https:\/\//https://x-access-token:${
 [ -d "$APP/.git" ] || git clone --quiet --branch "$BRANCH" "$URL" "$APP"
 cat > "$APP/.env.local" <<EOF
 GEMINI_API_KEY=$GEMINI_API_KEY
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.8-flash
 ELEVENLABS_API_KEY=$ELEVENLABS_API_KEY
 ELEVENLABS_VOICE_ID=21m00Tcm4TlvDq8ikWAM
 ELEVENLABS_MODEL_ID=eleven_flash_v2_5

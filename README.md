@@ -383,7 +383,7 @@ npm run build && npm start
 
 | Variable | Enables | Without it |
 |---|---|---|
-| `GEMINI_API_KEY`, `GEMINI_MODEL` (default `gemini-2.5-flash`) | Analyst mode with Gemini function calling; Gemini-written "Brief me" | Built-in analyst and template brief |
+| `GEMINI_API_KEY`, `GEMINI_MODEL` (default `gemini-3.8-flash`) | Analyst mode with Gemini function calling; Gemini-written "Brief me" | Built-in analyst and template brief |
 | `ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`, `ELEVENLABS_MODEL_ID` | Spoken answers with word-timed transcript | Browser speech synthesis |
 | `FRED_API_KEY` | Live Brent, LNG and wheat prices (cached 10 minutes) | Prices panel hidden |
 

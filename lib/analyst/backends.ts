@@ -20,7 +20,7 @@ export const geminiBackend: AnalystBackend = async (q, history, env, run) => {
     const j = await r.json();
     if (j.configured === false) throw Object.assign(new Error("No GEMINI_API_KEY set"), { quiet: true });
     if (!r.ok) throw new Error(j.error ?? `HTTP ${r.status}`);
-    if (!j.calls?.length) return { text: String(j.text ?? "").trim(), provider: `Gemini · ${j.model}`, tools };
+    if (!j.calls?.length) return { text: String(j.text ?? "").trim(), provider: `Gemini · ${j.model}`, tools, note: j.finishReason === "MAX_TOKENS" ? "Gemini hit its output limit, so this answer may be cut short." : undefined };
     contents.push(j.content as Content);
     contents.push({ role: "user", parts: (j.calls as { name: string; args: Record<string, unknown> }[]).map((c) => {
       tools.push(c.name);

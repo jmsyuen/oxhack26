@@ -1,29 +1,17 @@
 import { NextResponse } from "next/server";
 import { ANALYST_SYSTEM, TOOL_DEFS } from "@/lib/analyst/tools";
 import { getConfig } from "@/lib/server/config";
+import { fastConfig, geminiError, generateContent } from "@/lib/server/gemini";
 
 export const dynamic = "force-dynamic";
 // Vercel: allow slow model responses (within every plan's limit)
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 /**
  * Analyst Mode proxy for Google Gemini with function calling. The key stays here; the browser runs the tools
  * (they read the live forecast / simulator / optimiser) and posts the results back. Only allow-listed tools pass.
  */
 const ALLOWED = new Set(TOOL_DEFS.map((t) => t.name));
-
-async function call(key: string, model: string, body: unknown) {
-  const ctl = new AbortController();
-  const timer = setTimeout(() => ctl.abort(), 25000);
-  try {
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
-      method: "POST", headers: { "Content-Type": "application/json", "x-goog-api-key": key }, body: JSON.stringify(body), signal: ctl.signal,
-    });
-    return { r, j: await r.json().catch(() => ({})) };
-  } finally {
-    clearTimeout(timer);
-  }
-}
 
 export async function POST(req: Request) {
   const { gemini } = getConfig();
@@ -37,17 +25,17 @@ export async function POST(req: Request) {
     contents: body.contents,
     tools: [{ functionDeclarations: TOOL_DEFS }],
     toolConfig: { functionCallingConfig: { mode: "AUTO" } },
-    generationConfig: { temperature: 0.3, maxOutputTokens: 900 },
+    generationConfig: fastConfig(gemini.model, 8192, 0.3), // thinking tokens count against this on Gemini 3
   };
   try {
-    const { r, j } = await call(gemini.key, gemini.model, req1);
-    if (!r.ok) return NextResponse.json({ error: j?.error?.message ?? `Gemini HTTP ${r.status}` }, { status: 502 });
-    const content = j?.candidates?.[0]?.content ?? { role: "model", parts: [] };
+    const res = await generateContent(gemini.key, gemini.model, req1, 50000);
+    if (!res.ok) return NextResponse.json({ error: geminiError(res) }, { status: 502 });
+    const content = res.json?.candidates?.[0]?.content ?? { role: "model", parts: [] };
     const parts: { text?: string; functionCall?: { name: string; args?: unknown } }[] = content.parts ?? [];
     const calls = parts.filter((p) => p.functionCall && ALLOWED.has(p.functionCall.name))
       .map((p) => ({ name: p.functionCall!.name, args: typeof p.functionCall!.args === "object" && p.functionCall!.args ? p.functionCall!.args : {} }));
     const text = parts.map((p) => p.text ?? "").join("").trim();
-    return NextResponse.json({ configured: true, model: gemini.model, content: { role: "model", parts }, calls, text });
+    return NextResponse.json({ configured: true, model: gemini.model, content: { role: "model", parts }, calls, text, finishReason: res.json?.candidates?.[0]?.finishReason ?? null });
   } catch (e) {
     return NextResponse.json({ error: e instanceof Error ? e.message : "Gemini unreachable" }, { status: 502 });
   }

@@ -5,7 +5,7 @@
 export function getConfig() {
   const v = (k: string) => (process.env[k] ?? "").trim();
   return {
-    gemini: { key: v("GEMINI_API_KEY"), model: v("GEMINI_MODEL") || "gemini-2.5-flash" },
+    gemini: { key: v("GEMINI_API_KEY"), model: v("GEMINI_MODEL") || "gemini-3.8-flash" },
     elevenlabs: {
       key: v("ELEVENLABS_API_KEY"),
       voiceId: v("ELEVENLABS_VOICE_ID") || "21m00Tcm4TlvDq8ikWAM",
